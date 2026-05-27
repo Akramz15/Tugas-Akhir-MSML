@@ -2,4 +2,9 @@ pandas
 scikit-learn
 matplotlib
 seaborn
+joblib
+fastapi
+uvicorn
+prometheus-client
+pydantic
 mlflow==2.19.0

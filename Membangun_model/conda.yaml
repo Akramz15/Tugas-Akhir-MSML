@@ -11,3 +11,7 @@ dependencies:
   - pip
   - pip:
       - mlflow==2.19.0
+      - fastapi
+      - uvicorn
+      - prometheus-client
+      - pydantic

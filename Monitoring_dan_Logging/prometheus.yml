@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # Seberapa sering prometheus menarik data metrik
+
+scrape_configs:
+  - job_name: 'fastapi_model_exporter'
+    static_configs:
+      - targets: ['localhost:8001'] # Alamat port prometheus_exporter berjalan
