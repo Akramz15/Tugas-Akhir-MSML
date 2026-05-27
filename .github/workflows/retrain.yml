@@ -1,0 +1,37 @@
+name: Retrain Model (CI)
+
+on:
+  push:
+    paths:
+      - 'Membangun_model/**'
+      - 'Eksperimen_SML_akram/**'
+      - '.github/workflows/retrain.yml'
+  workflow_dispatch:
+
+jobs:
+  train-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          python-version: 3.12.7
+          activate-environment: msml
+          environment-file: Membangun_model/conda.yaml
+          auto-activate-base: false
+          
+      - name: Run MLflow Project (Retrain)
+        shell: bash -el {0}
+        run: |
+          cd Membangun_model
+          mlflow run . --no-conda
+          
+      - name: Upload Model Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-artefak
+          path: Membangun_model/model_artefak.pkl
+          retention-days: 5

@@ -1,0 +1,13 @@
+name: msml
+channels:
+  - defaults
+dependencies:
+  - python=3.12.7
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - joblib
+  - pip
+  - pip:
+      - mlflow==2.19.0
