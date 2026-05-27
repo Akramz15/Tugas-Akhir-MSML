@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Path berdasarkan lokasi script ini
     base_dir = os.path.dirname(os.path.abspath(__file__))
     RAW_PATH = os.path.join(base_dir, "../churn_dataset_raw/Churn_Modelling.csv")
-    OUTPUT_DIR = os.path.join(base_dir, "namadataset_preprocessing")
+    OUTPUT_DIR = os.path.join(base_dir, "../../Membangun_model/namadataset_preprocessing")
     
     # Menjalankan fungsi preprocessing
     run_preprocessing(RAW_PATH, OUTPUT_DIR)

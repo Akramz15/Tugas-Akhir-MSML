@@ -17,7 +17,7 @@ import os
 def train_basic_model():
     print("Memuat dataset dari folder namadataset_preprocessing...")
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_dir, "../Eksperimen_SML_akram/preprocessing/namadataset_preprocessing/churn_dataset_preprocessing.csv")
+    data_path = os.path.join(base_dir, "namadataset_preprocessing/churn_dataset_preprocessing.csv")
     df = pd.read_csv(data_path)
     
     # Memisahkan fitur (X) dan target (y)
