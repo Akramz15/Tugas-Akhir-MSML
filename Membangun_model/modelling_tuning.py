@@ -4,9 +4,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import mlflow
 
-# Setup MLflow Tracking URI lokal (Abaikan jika berjalan di GitHub Actions)
+# Setup MLflow Tracking URI lokal (Abaikan jika dijalankan oleh MLflow CLI atau CI)
 import os
-if not os.getenv("GITHUB_ACTIONS"):
+if not os.getenv("GITHUB_ACTIONS") and not os.getenv("MLFLOW_RUN_ID"):
     mlflow.set_tracking_uri("http://127.0.0.1:5001/")
 mlflow.set_experiment("Membangun_Model_Tuning_akram")
 

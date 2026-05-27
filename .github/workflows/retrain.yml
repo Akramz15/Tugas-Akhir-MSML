@@ -27,7 +27,7 @@ jobs:
         shell: bash -el {0}
         run: |
           cd Membangun_model
-          mlflow run . --no-conda
+          mlflow run . --env-manager=local --experiment-name="Membangun_Model_Tuning_akram"
           
       - name: Upload Model Artifact
         uses: actions/upload-artifact@v4
