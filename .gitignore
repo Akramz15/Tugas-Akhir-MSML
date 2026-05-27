@@ -25,3 +25,11 @@ Thumbs.db
 
 # Data
 data/
+
+# Screenshots
+screenshoot*.png
+screenshoot*.jpg
+Monitoring dan Logging/1.bukti_serving/
+Monitoring dan Logging/4.bukti monitoring Prometheus/
+Monitoring dan Logging/5.bukti monitoring Grafana/
+Monitoring dan Logging/6.bukti alerting Grafana/
