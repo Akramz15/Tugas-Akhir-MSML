@@ -3,8 +3,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import mlflow
 
-# Setup MLflow Tracking URI lokal
-mlflow.set_tracking_uri("http://127.0.0.1:5001/")
+# Setup MLflow Tracking URI lokal (Abaikan jika berjalan di GitHub Actions)
+import os
+if not os.getenv("GITHUB_ACTIONS"):
+    mlflow.set_tracking_uri("http://127.0.0.1:5001/")
 mlflow.set_experiment("Membangun_Model_Basic_akram")
 
 # Autolog aktif sesuai instruksi Kriteria 2 (Basic)
